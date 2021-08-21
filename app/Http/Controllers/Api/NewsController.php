@@ -70,7 +70,7 @@ class NewsController extends Controller
     
     public function show ($newsId)
     {
-        $news = News::find($newsId);
+        $news = News::findOrFail($newsId);
 
         return response()->json($news);
     }
